@@ -1,0 +1,14 @@
+Vout = 20
+Iout = 1
+Vreg = 2
+Vd = 1
+Vin = 24
+VinPk = 24*sqrt(2)
+Vcond = Vout + Vreg + Vd*2
+Theta = rad2deg(asin(Vcond/VinPk))
+ThetaC = 90 - Theta
+ThetaD = 180 - ThetaC
+deltat = ThetaD/180 * 1/120
+C = Iout*deltat/(VinPk-2*Vd-(Vout+Vreg))
+Vinavg = (VinPk-2*Vd + (Vout+Vreg))/2
+Pdis = (Vinavg - Vout)*Iout

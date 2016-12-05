@@ -1,5 +1,5 @@
-Vin = 1.5
-Vload = 5
+Vin = 3.6
+Vload = 15
 Iload = 1
 Vpp = 0.1
 Fs = 50000

@@ -2,7 +2,7 @@ clear
 close all
 Vin = 50
 Vout = -25;
-Io = 4;
+jIo = 4;
 Vpp = 0.1;
 fs = 65000;
 Vds = 0.3;
@@ -18,6 +18,8 @@ L = V1*(D/fs)/Ipk
 x = [1 1;-1 1]\[2*Io/(1-D);-Ipk]
 I1 = x(1)
 I2 = x(2)
+I2test = ((2*Io)/(1-D)-Ipk)/2
+I1test = I2test + Ipk
 ESR = Vpp/I1
 Irms = sqrt((-Io)^2*D+(1-D)/3*((I1-Io)^2+(I1-Io)*(I2-Io)+(I2-Io)^2))
 %Inductor voltage

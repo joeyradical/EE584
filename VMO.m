@@ -1,9 +1,9 @@
 clear
 fc = 2000;
-GPS_phase = -160;
-GPS_gain = 20;
-Kfb = 0.6;
-PWM_gain = 0.2;
+GPS_phase = -140.447;
+GPS_gain = 14.1384
+Kfb = 0.2;
+PWM_gain = 0.556;
 PM = 60;
 Pboost = -90 + PM - GPS_phase;
 Kboost = tan(pi/4+deg2rad(Pboost)/4);
